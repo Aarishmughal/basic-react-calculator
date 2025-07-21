@@ -25,13 +25,14 @@ const Calculator = () => {
                 <h1 className='card-header fw-light'>Simple Calculator</h1>
                 <div className='card-body'>
                     <InputField
+                        data_testid="input-a"
                         label="Number 1"
                         value={num1}
                         onChange={(e) => setNum1(e.target.value)}
                     />
                     <div className='mb-2'>
                         <label className='form-text'>Operation</label>
-                        <select className='form-control' onChange={handleChange} value={operation}>
+                        <select className='form-control' onChange={handleChange} value={operation} data-testid="operator">
                             <option value={""} selected disabled>Select Operation</option>
                             <option value={"+"}>+</option>
                             <option value={"-"}>-</option>
@@ -40,6 +41,7 @@ const Calculator = () => {
                         </select>
                     </div>
                     <InputField
+                        data_testid="input-b"
                         label="Number 2"
                         value={num2}
                         onChange={(e) => setNum2(e.target.value)}
@@ -48,7 +50,7 @@ const Calculator = () => {
                 </div>
                 <div className='card-footer'>
                     <label className='form-text'>Result</label>
-                    <input type='text' className='form-control' disabled readOnly value={result} />
+                    <input type='text' className='form-control' disabled readOnly value={result} data-testid="result" />
                 </div>
             </div>
         </>
