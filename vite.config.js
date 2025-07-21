@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()], base: "/basic-react-calculator/", test: {
     environment: 'jsdom',
     globals: true,
-    setupFiles: './src/test/setup.js'
+    setupFiles: './src/test/setup.jsx'
   },
 })
