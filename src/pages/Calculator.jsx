@@ -11,13 +11,13 @@ const Calculator = () => {
     }
     const computeResult = () => {
         if (operation == "+")
-            setResult(Number(num1 + num2));
+            setResult(Number(num1) + Number(num2));
         else if (operation == "-")
-            setResult(Number(num1 - num2));
+            setResult(Number(num1) - Number(num2));
         else if (operation == "*")
-            setResult(Number(num1 * num2));
+            setResult(Number(num1) * Number(num2));
         else if (operation == "/")
-            setResult(Number(num1 / num2));
+            setResult(Number(num1) / Number(num2));
     }
     return (
         <>
