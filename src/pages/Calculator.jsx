@@ -25,10 +25,11 @@ const Calculator = () => {
                 <h1 className='card-header fw-light'>Simple Calculator</h1>
                 <div className='card-body'>
                     <div className='mb-2'>
-                        <label className='form-text'>Number 1</label>
-                        <input type='number' className='form-control' value={num1} onChange={(e) => setNum1(e.target.value)} />
-                    </div>
-                    <div className='mb-2'>
+                        <NumberInput
+                            label="Number 1"
+                            value={num1}
+                            onChange={(e) => setNum1(e.target.value)}
+                        />
                         <label className='form-text'>Operation</label>
                         <select className='form-control' onChange={handleChange} value={operation}>
                             <option value={""} selected disabled>Select Operation</option>
@@ -38,10 +39,11 @@ const Calculator = () => {
                             <option value={"/"}>/</option>
                         </select>
                     </div>
-                    <div className='mb-3'>
-                        <label className='form-text'>Number 2</label>
-                        <input type='number' className='form-control' value={num2} onChange={(e) => setNum2(e.target.value)} />
-                    </div>
+                    <NumberInput
+                        label="Number 2"
+                        value={num2}
+                        onChange={(e) => setNum2(e.target.value)}
+                    />
                     <button className='btn btn-primary w-100' onClick={computeResult}>Get Result</button>
                 </div>
                 <div className='card-footer'>
