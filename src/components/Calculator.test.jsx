@@ -8,5 +8,5 @@ test('adds two numbers correctly', () => {
     fireEvent.change(screen.getByTestId('input-b'), { target: { value: '3' } })
     fireEvent.change(screen.getByTestId('operator'), { target: { value: '+' } })
 
-    expect(screen.getByTestId('result')).toHaveTextContent('8')
+    expect(screen.getByTestId('result')).toHaveValue('8')
 })
