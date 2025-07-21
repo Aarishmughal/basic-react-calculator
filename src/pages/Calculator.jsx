@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import InputField from "../components/InputField"
 const Calculator = () => {
     const [num1, setNum1] = useState("");
     const [num2, setNum2] = useState("");
@@ -24,12 +24,12 @@ const Calculator = () => {
             <div className='card shadow-lg' style={{ minWidth: "500px" }}>
                 <h1 className='card-header fw-light'>Simple Calculator</h1>
                 <div className='card-body'>
+                    <InputField
+                        label="Number 1"
+                        value={num1}
+                        onChange={(e) => setNum1(e.target.value)}
+                    />
                     <div className='mb-2'>
-                        <NumberInput
-                            label="Number 1"
-                            value={num1}
-                            onChange={(e) => setNum1(e.target.value)}
-                        />
                         <label className='form-text'>Operation</label>
                         <select className='form-control' onChange={handleChange} value={operation}>
                             <option value={""} selected disabled>Select Operation</option>
@@ -39,7 +39,7 @@ const Calculator = () => {
                             <option value={"/"}>/</option>
                         </select>
                     </div>
-                    <NumberInput
+                    <InputField
                         label="Number 2"
                         value={num2}
                         onChange={(e) => setNum2(e.target.value)}
